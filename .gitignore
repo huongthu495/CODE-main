@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+.npm
+
+# Build outputs
+dist/
+build/
+*.tgz
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts - assets folder is too large for GitHub
+assets/
