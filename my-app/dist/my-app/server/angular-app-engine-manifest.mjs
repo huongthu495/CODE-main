@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'C:/Program Files/Git/CODE-main',
+  basePath: '/',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""

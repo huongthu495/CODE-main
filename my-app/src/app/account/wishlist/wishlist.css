@@ -945,7 +945,7 @@
     transform: translate(-50%, -50%);
     width: 24px;
     height: 24px;
-    background-image: url('assets/cart.png');
+    background-image: url('/assets/cart.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
