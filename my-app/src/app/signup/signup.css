@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('/assets/signup_bg.jpg') center/cover no-repeat;
+  background: url('assets/signup_bg.jpg') center/cover no-repeat;
 }
 
 .signup-overlay {

@@ -22,9 +22,9 @@
       class="wishlist-item"
       [routerLink]="getProductId(item) ? ['/product', getProductId(item)] : null">
       <div class="item-image">
-           <img [src]="item.productImage || '/assets/Logo.png'" 
+           <img [src]="item.productImage || 'assets/Logo.png'"
              [alt]="item.productName"
-             onerror="this.src='/assets/Logo.png'">
+             onerror="this.src='assets/Logo.png'">
       </div>
       
       <div class="item-content">

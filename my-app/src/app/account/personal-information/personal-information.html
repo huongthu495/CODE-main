@@ -8,7 +8,7 @@
     <div class="identity">
       <ng-container *ngIf="hasCustomAvatar; else defaultAvatar">
         <div class="avatar-wrapper has-custom">
-          <img [src]="form.avatar || '/assets/user.png'" alt="Avatar" class="avatar" />
+          <img [src]="form.avatar || 'assets/user.png'" alt="Avatar" class="avatar" />
         </div>
       </ng-container>
       <ng-template #defaultAvatar>
