@@ -23,5 +23,5 @@ build/
 .DS_Store
 Thumbs.db
 
-# Build artifacts - assets folder is too large for GitHub
-assets/
+# Build artifacts - ignore root assets folder only (docs/assets is tracked)
+/assets/
