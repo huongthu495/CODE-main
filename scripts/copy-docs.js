@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Copy build output from my-app/dist to docs folder for GitHub Pages
+ * Copy build output from my-app/dist to root folder for GitHub Pages
  */
 const fs = require('fs');
 const path = require('path');
 
 const srcDir = path.join(__dirname, '../my-app/dist/my-app/browser');
-const destDir = path.join(__dirname, '../docs');
+const destDir = path.join(__dirname, '..');
 
 function copyFileSync(src, dest) {
   const destDirPath = path.dirname(dest);
@@ -38,7 +38,7 @@ function copyDirSync(src, dest, exclude = []) {
 }
 
 try {
-  console.log('📋 Copying build output to docs folder...');
+  console.log('📋 Copying build output to root folder...');
   console.log(`   From: ${srcDir}`);
   console.log(`   To:   ${destDir}`);
 
@@ -47,8 +47,8 @@ try {
     process.exit(1);
   }
 
-  // Copy all files except assets (we maintain assets separately)
-  copyDirSync(srcDir, destDir, ['assets', 'index.csr.html']);
+  // Copy all files except index.csr.html (we'll rename to index.html)
+  copyDirSync(srcDir, destDir, ['index.csr.html']);
 
   // Copy and rename index.csr.html to index.html for GitHub Pages
   const srcIndexCsr = path.join(srcDir, 'index.csr.html');
@@ -67,7 +67,7 @@ try {
   }
 
   console.log('✅ Build output copied successfully!');
-  console.log(`   docs/ folder is ready for GitHub Pages deployment`);
+  console.log(`   Root folder is ready for GitHub Pages deployment`);
 } catch (err) {
   console.error('❌ Error copying files:', err.message);
   process.exit(1);

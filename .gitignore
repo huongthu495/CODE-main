@@ -23,5 +23,8 @@ build/
 .DS_Store
 Thumbs.db
 
-# Build artifacts - ignore root assets folder only (docs/assets is tracked)
+# Old docs folder (migrated to root build)
+docs/
+
+# Build artifacts - ignore root assets folder (will be overwritten by build)
 /assets/
