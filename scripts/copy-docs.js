@@ -48,7 +48,15 @@ try {
   }
 
   // Copy all files except assets (we maintain assets separately)
-  copyDirSync(srcDir, destDir, ['assets']);
+  copyDirSync(srcDir, destDir, ['assets', 'index.csr.html']);
+
+  // Copy and rename index.csr.html to index.html for GitHub Pages
+  const srcIndexCsr = path.join(srcDir, 'index.csr.html');
+  const destIndex = path.join(destDir, 'index.html');
+  if (fs.existsSync(srcIndexCsr)) {
+    console.log('📄 Copying index.csr.html → index.html...');
+    copyFileSync(srcIndexCsr, destIndex);
+  }
 
   // Copy updated assets if they exist
   const srcAssets = path.join(srcDir, 'assets');
